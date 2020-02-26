@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The contents of this file will be loaded for each web application -->
+<Context>
+
+<Resource
+	name="datasource_plos"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/plos?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+<Resource
+	name="datasource_asm"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/asm?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+<Resource
+	name="datasource_ieeecs"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.193:3308/ieeecs?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_rsc"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/rsc?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/> 
+<Resource
+	name="datasource_mms"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3308/mms?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/> 
+
+<Resource
+	name="datasource_astm"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/astm?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="20"
+	maxIdle="5"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_insight"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/insight?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="3"
+	minIdle="3"
+ 
+	maxActive="20"
+	maxIdle="5"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_tgl"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3306/tgl?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="3"
+	minIdle="3"
+ 
+	maxActive="20"
+	maxIdle="5"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_ieee"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3308/ieee?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_iopscience"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.193:3308/iopscience?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="5"
+	minIdle="5"
+ 
+	maxActive="25"
+	maxIdle="7"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_hcn"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.193:3308/hcn?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="4"
+	minIdle="4"
+ 
+	maxActive="20"
+	maxIdle="5"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_rcni"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3308/rcni?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="4"
+	minIdle="4"
+ 
+	maxActive="20"
+	maxIdle="6"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+
+<Resource
+	name="datasource_ijc"
+	auth="Container"
+	type="javax.sql.DataSource"
+	username="insight"
+	password="Mps@123*"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+	url="jdbc:mysql://10.31.1.192:3308/ijc?useSSL=false"
+	
+	testWhileIdle="true"
+	testOnBorrow="true"
+	testOnReturn="false"
+	validationQuery="SELECT 1"
+	validationInterval="30000"
+ 
+	initialSize="3"
+	minIdle="3"
+ 
+	maxActive="20"
+	maxIdle="5"
+ 
+	maxWait="30000"
+	minEvictableIdleTimeMillis="60000"
+	timeBetweenEvictionRunsMillis="50000"
+	jmxEnabled="true"
+ 
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="false"
+ 	maxAge="120000"
+ 	
+	jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"
+	
+/>
+	 
+</Context>
+
