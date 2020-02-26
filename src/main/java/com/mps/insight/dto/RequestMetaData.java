@@ -12,12 +12,18 @@ import javax.ws.rs.core.UriInfo;
 
 import org.slf4j.LoggerFactory;
 
+import com.mps.insight.dao.InsightDAO;
+import com.mps.insight.product.PublisherSettings;
+import com.mps.redis.Redis;
 
-import com.mps.insight.repository.InsightDAO;
 
 
-public class RequestMetaData {
 
+
+
+/*@Provider*/
+public class RequestMetaData {	
+	
 	@Context
 	private UriInfo info;
 
@@ -189,6 +195,7 @@ public class RequestMetaData {
 		this.remoteIP = remoteIP;
 	}
 	
+
 	public void setParameters(UserDTO user, String token){
 		try {
 			setPublisherID(user.getPublisherID());
@@ -208,7 +215,6 @@ public class RequestMetaData {
 		}
 	}
 	
-	
 	public void setLiveYearMoth(){
 		try {
 			setLiveYear(getLiveYear());
@@ -222,7 +228,7 @@ public class RequestMetaData {
 		try {
 			if(publisherCode!=null){
 			
-				//setInsightDao(InsightDAO.getInstance(publisherCode));
+				setInsightDao(InsightDAO.getInstance(publisherCode));
 			}
 		} catch (Exception e) {
 			
@@ -232,9 +238,9 @@ public class RequestMetaData {
 		String publisherCode ="";
 		try {
 			if(webmartID>0){
-			//	Redis redis = new Redis();
-			//	publisherCode = redis.getValueFromRedisWithKey(webmartID+"_publisher_name");
-			//	setInsightDao(InsightDAO.getInstance(publisherCode));
+				Redis redis = new Redis();
+				publisherCode = redis.getValueFromRedisWithKey(webmartID+"_publisher_name");
+				setInsightDao(InsightDAO.getInstance(publisherCode));
 			}
 		} catch (Exception e) {
 			
@@ -245,8 +251,8 @@ public class RequestMetaData {
 	public String getLiveYear(){
 		String liveYear="0000";
 		try {
-		//	PublisherSettings ps =new PublisherSettings(rmd);
-			//liveYear = ps.getPublisherLiveYear(webmartCode);
+			PublisherSettings ps =new PublisherSettings(rmd);
+			liveYear = ps.getPublisherLiveYear(webmartCode);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -256,8 +262,8 @@ public class RequestMetaData {
 	public String getLiveMonth(){
 		String liveMonth="00";
 		try {
-		//	PublisherSettings ps =new PublisherSettings(rmd);
-			//liveMonth = ps.getPublisherLiveMonth(webmartCode);
+			PublisherSettings ps =new PublisherSettings(rmd);
+			liveMonth = ps.getPublisherLiveMonth(webmartCode);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -380,7 +386,7 @@ public class RequestMetaData {
 	
 	public void destroyConnection(){
 		if (this.insightDao != null) {
-				//this.insightDao.disconnect();
+				this.insightDao.disconnect();
 			}
 			this.insightDao = null;
 		}
@@ -439,6 +445,4 @@ public class RequestMetaData {
         }
     }
     
-	
-
 }

@@ -18,6 +18,8 @@ public class NewInsightc5ApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NewInsightc5ApiApplication.class, args);
 	}
+	
+	
 	@EnableWebSecurity
 	@Configuration
 	class WebSecurityConfig extends WebSecurityConfigurerAdapter {

@@ -9,11 +9,12 @@ import javax.json.JsonArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mps.insight.dao.InsightDAO;
+import com.mps.insight.dao.MyDataTable;
 import com.mps.insight.dto.RequestMetaData;
 import com.mps.insight.dto.UserDTO;
 import com.mps.insight.global.TableMapper;
-import com.mps.insight.repository.InsightDAO;
-import com.mps.insight.repository.MyDataTable;
+
 
 
 public class Users {
